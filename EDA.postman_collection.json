@@ -1,0 +1,758 @@
+{
+	"info": {
+		"_postman_id": "e518ba12-638d-449b-8d4f-3caae203a9c0",
+		"name": "EDA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TechDev",
+			"item": [
+				{
+					"name": "GetSkillList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/skill/List?fab=MMFA",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"List"
+							],
+							"query": [
+								{
+									"key": "fab",
+									"value": "MMFA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSkillInfo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/skill/SkillInfo?skill_id=17",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"SkillInfo"
+							],
+							"query": [
+								{
+									"key": "skill_id",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetParameter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Parameter/GetParameters?types=SKILL_TYPE,IMPL_WAY",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Parameter",
+								"GetParameters"
+							],
+							"query": [
+								{
+									"key": "types",
+									"value": "SKILL_TYPE,IMPL_WAY"
+								},
+								{
+									"key": "types[]",
+									"value": "IMPL_WAY",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FeedbackImpls",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"skillid\":1,\r\n \"fab\":\"L6A\",\r\n \"stage\":\"Array\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/FeedbackImpls?skill_id=1&fab=L6A_Array",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"FeedbackImpls"
+							],
+							"query": [
+								{
+									"key": "skill_id",
+									"value": "1"
+								},
+								{
+									"key": "fab",
+									"value": "L6A_Array"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SkillFeedbackImplSummary",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/SkillFeedbackImplSummary?site=LCD1&skillIds=1,2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"SkillFeedbackImplSummary"
+							],
+							"query": [
+								{
+									"key": "site",
+									"value": "LCD1"
+								},
+								{
+									"key": "skillIds",
+									"value": "1,2"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SkillFeedbackImplSummaryV2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/SkillFeedbackImplSummaryV2?site=LCD1&skillIds=1,2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"SkillFeedbackImplSummaryV2"
+							],
+							"query": [
+								{
+									"key": "site",
+									"value": "LCD1"
+								},
+								{
+									"key": "skillIds",
+									"value": "1,2"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExportExcel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/ExportExcel?site=LCD1&skillIds=1,2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"ExportExcel"
+							],
+							"query": [
+								{
+									"key": "site",
+									"value": "LCD1"
+								},
+								{
+									"key": "skillIds",
+									"value": "1,2"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/DownloadFeedbackFile?skill_id=1&fab=L6A_Array&skill_roadmap_id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"DownloadFeedbackFile"
+							],
+							"query": [
+								{
+									"key": "skill_id",
+									"value": "1"
+								},
+								{
+									"key": "fab",
+									"value": "L6A_Array"
+								},
+								{
+									"key": "skill_roadmap_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDeep",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/dashboard/Getdeep?site=LCD1&skillIds=1,2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"dashboard",
+								"Getdeep"
+							],
+							"query": [
+								{
+									"key": "site",
+									"value": "LCD1"
+								},
+								{
+									"key": "skillIds",
+									"value": "1,2"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetWidth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/dashboard/Getwidth?site=LCD1&skillIds=1,2,5,17,1013",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"dashboard",
+								"Getwidth"
+							],
+							"query": [
+								{
+									"key": "site",
+									"value": "LCD1"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "skillIds",
+									"value": "1,2,5,17,1013"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Parameter/GetSite",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Parameter",
+								"GetSite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateSkill",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {           \r\n            \"skill_name\": \"Image Recognition&Deep Learning3\",\r\n            \"description\": \"test2\",\r\n            \"status\":\"Offline\",\r\n            \"fab\": \"MMFA\",        \r\n            \"user_id\": \"2105182\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/CreateSkill",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"CreateSkill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "File",
+									"type": "file",
+									"src": "/C:/Users/Jane Nine/Downloads/0625法說會時間表.xlsx"
+								},
+								{
+									"key": "SkillRoadmapID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "SkillID",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Fab",
+									"value": "L6A_Array",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/UploadFile",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"UploadFile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SkillFeedbackImplFileUpload2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/Jane Nine/Downloads/0625法說會時間表.xlsx"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/Jane Nine/Downloads/SkillFeedbackImplSummary (4).xlsx"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/SkillFeedbackImplFileUpload2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"SkillFeedbackImplFileUpload2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpsertSkillFullInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"skill_id\": 1,\r\n    \"skill_name\": \"Image Recognition&Deep Learning\",\r\n    \"create_fab\": \"MMFA\",\r\n    \"create_user_id\": \"2105182\",\r\n    \"site_settings\": [],\r\n    \"roadmaps\": [\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 1,\r\n            \"skill_roadmap_name\": \"Defect Generation\",\r\n            \"description\": \"缺陷生成（增量集），針對缺陷少見且資料缺乏，生成相同特徵的缺陷\",\r\n            \"type\": \"Base\",\r\n            \"fab\": \"MMFA\",\r\n            \"user_id\": null,\r\n            \"is_use\": true\r\n        },\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 2,\r\n            \"skill_roadmap_name\": \"Model Transformation\",\r\n            \"description\": \"不同產品Ｍodel進行AI模型轉移\",\r\n            \"type\": \"Base\",\r\n            \"fab\": \"MMFA\",\r\n            \"user_id\": null,\r\n            \"is_use\": true\r\n        },\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 3,\r\n            \"skill_roadmap_name\": \"Reinforcement Learning\",\r\n            \"description\": \"增強學習，目前使用在Array Auto repair\",\r\n            \"type\": \"Future\",\r\n            \"fab\": \"MMFA\",\r\n            \"user_id\": null,\r\n            \"is_use\": true\r\n        },\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 4,\r\n            \"skill_roadmap_name\": \"AVI Application (Moire, Demura, Mura Judge)\",\r\n            \"description\": \"自動偵測檢查，主要為應用在光箱為主\",\r\n            \"type\": \"Future\",\r\n            \"fab\": \"L6A_Array\",\r\n            \"user_id\": null,\r\n            \"is_use\": true\r\n        },\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 17,\r\n            \"skill_roadmap_name\": \"AA-2\",\r\n            \"description\": \"AA-2\",\r\n            \"type\": \"Future\",\r\n            \"fab\": \"MMFA\",\r\n            \"user_id\": null,\r\n            \"is_use\": true\r\n        },\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 18,\r\n            \"skill_roadmap_name\": \"BB-2\",\r\n            \"description\": \"BB-2\",\r\n            \"type\": \"Future\",\r\n            \"fab\": \"MMFA\",\r\n            \"user_id\": null,\r\n            \"is_use\": true\r\n        },\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 29,\r\n            \"skill_roadmap_name\": \"CC\",\r\n            \"description\": \"CC\",\r\n            \"type\": \"Future\",\r\n            \"fab\": \"MMFA\",\r\n            \"user_id\": null,\r\n            \"is_use\": false\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/upsertSkillFullInfo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"upsertSkillFullInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateSkillFullInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"skill_id\": 1,\r\n    \"skill_name\": \"Image Recognition&Deep Learning\",\r\n    \"create_fab\": \"MMFA\",\r\n    \"create_user_id\": \"2105182\",\r\n    \"site_settings\": [],\r\n    \"roadmaps\": [\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 1,\r\n            \"skill_roadmap_name\": \"Defect Generation\",\r\n            \"description\": \"缺陷生成（增量集），針對缺陷少見且資料缺乏，生成相同特徵的缺陷\",\r\n            \"type\": \"Base\",\r\n            \"fab\": \"MMFA\",\r\n            \"user_id\": null,\r\n            \"is_use\": true\r\n        },\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 2,\r\n            \"skill_roadmap_name\": \"Model Transformation\",\r\n            \"description\": \"不同產品Ｍodel進行AI模型轉移\",\r\n            \"type\": \"Base\",\r\n            \"fab\": \"MMFA\",\r\n            \"user_id\": null,\r\n            \"is_use\": true\r\n        },\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 3,\r\n            \"skill_roadmap_name\": \"Reinforcement Learning\",\r\n            \"description\": \"增強學習，目前使用在Array Auto repair\",\r\n            \"type\": \"Future\",\r\n            \"fab\": \"MMFA\",\r\n            \"user_id\": null,\r\n            \"is_use\": true\r\n        },\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 4,\r\n            \"skill_roadmap_name\": \"AVI Application (Moire, Demura, Mura Judge)\",\r\n            \"description\": \"自動偵測檢查，主要為應用在光箱為主\",\r\n            \"type\": \"Future\",\r\n            \"fab\": \"L6A_Array\",\r\n            \"user_id\": null,\r\n            \"is_use\": true\r\n        },\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 17,\r\n            \"skill_roadmap_name\": \"AA-2\",\r\n            \"description\": \"AA-2\",\r\n            \"type\": \"Future\",\r\n            \"fab\": \"MMFA\",\r\n            \"user_id\": null,\r\n            \"is_use\": true\r\n        },\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 18,\r\n            \"skill_roadmap_name\": \"BB-2\",\r\n            \"description\": \"BB-2\",\r\n            \"type\": \"Future\",\r\n            \"fab\": \"MMFA\",\r\n            \"user_id\": null,\r\n            \"is_use\": true\r\n        },\r\n        {\r\n            \"skill_id\": 1,\r\n            \"skill_name\": \"Image Recognition&Deep Learning\",\r\n            \"skill_roadmap_id\": 29,\r\n            \"skill_roadmap_name\": \"CC\",\r\n            \"description\": \"CC\",\r\n            \"type\": \"Future\",\r\n            \"fab\": \"MMFA\",\r\n            \"user_id\": null,\r\n            \"is_use\": false\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/CreateSkillFullInfo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"CreateSkillFullInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSkillFeedbackImpls",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n            {\r\n                \"skill_id\": 1,\r\n                \"skill_name\": \"Image Recognition&Deep Learning\",\r\n                \"skill_roadmap_id\": 1,\r\n                \"skill_roadmap_name\": \"Defect Generation\",\r\n                \"impl_way\": \"2\",\r\n                \"comment\": \"ImplWay2-update\",\r\n                \"status\": \"Verifying\",\r\n                \"user_id\": \"2105182\",\r\n                \"fab\": \"L6A\",\r\n                \"stage\": \"Array\"\r\n            },\r\n            {\r\n                \"skill_id\": 1,\r\n                \"skill_name\": \"Image Recognition&Deep Learning\",\r\n                \"skill_roadmap_id\": 2,\r\n                \"skill_roadmap_name\": \"Model Transformation\",\r\n                \"impl_way\": \"3\",\r\n                \"comment\": \"ImplWay3-update\",\r\n                \"status\": \"Pass\",\r\n                \"user_id\": \"2105182\",\r\n                \"fab\": \"L6A\",\r\n                \"stage\": \"Array\"\r\n            },\r\n            {\r\n                \"skill_id\": 1,\r\n                \"skill_name\": \"Image Recognition&Deep Learning\",\r\n                \"skill_roadmap_id\": 3,\r\n                \"skill_roadmap_name\": \"Reinforcement Learning\",\r\n                \"impl_way\": \"4\",\r\n                \"comment\": \"沒有需求-update\",\r\n                \"status\": \"Fail\",\r\n                \"user_id\": \"2105182\",\r\n                \"fab\": \"L6A\",\r\n                \"stage\": \"Array\"\r\n            },\r\n            {\r\n                \"skill_id\": 1,\r\n                \"skill_name\": \"Image Recognition&Deep Learning\",\r\n                \"skill_roadmap_id\": 4,\r\n                \"skill_roadmap_name\": \"AVI Application (Moire, Demura, Mura Judge)\",\r\n                \"impl_way\": \"1\",\r\n                \"comment\": \"ImplWay1-update\",\r\n                \"status\": \"Verifying\",\r\n                \"user_id\": \"2105182\",\r\n                \"fab\": \"L6A\",\r\n                \"stage\": \"Array\"\r\n            }\r\n        ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/UpdateSkillFeedbackImpls",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"UpdateSkillFeedbackImpls"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertSkillFeedbackImpls",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n            {\r\n                \"skill_id\": 1,\r\n                \"skill_name\": \"Image Recognition&Deep Learning\",\r\n                \"skill_roadmap_id\": 1,\r\n                \"skill_roadmap_name\": \"Defect Generation\",\r\n                \"impl_way\": \"2\",\r\n                \"comment\": \"ImplWay2-update\",\r\n                \"status\": \"Verifying\",\r\n                \"user_id\": \"2105182\",\r\n                \"fab\": \"L6A\",\r\n                \"stage\": \"CF\"\r\n            },\r\n            {\r\n                \"skill_id\": 1,\r\n                \"skill_name\": \"Image Recognition&Deep Learning\",\r\n                \"skill_roadmap_id\": 2,\r\n                \"skill_roadmap_name\": \"Model Transformation\",\r\n                \"impl_way\": \"3\",\r\n                \"comment\": \"ImplWay3-update\",\r\n                \"status\": \"Pass\",\r\n                \"user_id\": \"2105182\",\r\n                \"fab\": \"L6A\",\r\n                \"stage\": \"CF\"\r\n            },\r\n            {\r\n                \"skill_id\": 1,\r\n                \"skill_name\": \"Image Recognition&Deep Learning\",\r\n                \"skill_roadmap_id\": 3,\r\n                \"skill_roadmap_name\": \"Reinforcement Learning\",\r\n                \"impl_way\": \"4\",\r\n                \"comment\": \"沒有需求-update\",\r\n                \"status\": \"Fail\",\r\n                \"user_id\": \"2105182\",\r\n                \"fab\": \"L6A\",\r\n                \"stage\": \"CF\"\r\n            },\r\n            {\r\n                \"skill_id\": 1,\r\n                \"skill_name\": \"Image Recognition&Deep Learning\",\r\n                \"skill_roadmap_id\": 4,\r\n                \"skill_roadmap_name\": \"AVI Application (Moire, Demura, Mura Judge)\",\r\n                \"impl_way\": \"1\",\r\n                \"comment\": \"ImplWay1-update\",\r\n                \"status\": \"Verifying\",\r\n                \"user_id\": \"2105182\",\r\n                \"fab\": \"L6A\",\r\n                \"stage\": \"CF\"\r\n            }\r\n        ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/InsertSkillFeedbackImpls",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"InsertSkillFeedbackImpls"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpsertSkillFeedbackImpls",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"skill_id\":1, \r\n    \"fab\":\"L6A_Array\",  \r\n    \"user_id\":\"2105182\",\r\n    \"feedback_impls\": [\r\n        {\r\n            \"skill_roadmap_id\":1,\r\n            \"impl_way\":\"1\",\r\n            \"comment\":\"智控中心Alarm code文字偵測/解析/ 推薦Action, 目前無熟悉NLP人員\"           \r\n        },\r\n        {\r\n            \"skill_roadmap_id\":2,\r\n            \"impl_way\":\"1\",\r\n            \"comment\":\"2021年產學專案:低成本室內定位技術應用於FAB之即時安全監控與進階工位管理(Array提出)\"           \r\n        },\r\n        {\r\n            \"skill_roadmap_id\":3,\r\n            \"impl_way\":\"1\",\r\n            \"comment\":\"沒有需求\"           \r\n        },\r\n        {\r\n            \"skill_roadmap_id\":4,\r\n            \"impl_way\":\"1\",\r\n            \"comment\":\"沒有需求\"           \r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/skill/UpsertSkillFeedbackImpls",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"skill",
+								"UpsertSkillFeedbackImpls"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Insideout",
+			"item": [
+				{
+					"name": "GetTest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5008/api/Dashboard/GetTest",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5008",
+							"path": [
+								"api",
+								"Dashboard",
+								"GetTest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateTest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {           \r\n            \"data\": \"Test2\"          \r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5008/api/Dashboard/CreateTest",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5008",
+							"path": [
+								"api",
+								"Dashboard",
+								"CreateTest"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
