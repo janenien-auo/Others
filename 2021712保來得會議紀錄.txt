@@ -1,3 +1,11 @@
-1.	LT�L�k��t�ϳs�u��x��Azure����,�ФS������Domain name, LT�P����U�T��LT IT�O�_�i�H�B�z������]�w
-2.	�вM�y��one page�e�{��ƤW�߸��|PLC<->AU Link<->EDA API���Q�k�Ϋ�ĳ���k,�ýЧ������� AU Link <->EDA API ����ƤW�߫�ĳ���k,����ƤW�߬[�c���y�z
-3.	�Ю治�N���椺�e�������Data�d��,�H�ΤW��data�e�{�e���d��
+1.	LT無法跨廠區連線到台中Azure雲端,請又中提供Domain name, LT同仁協助訊問LT IT是否可以處理防火牆設定
+2.	請清斌用one page呈現資料上拋路徑PLC<->AU Link<->EDA API的想法及建議做法,並請宏勳提供 AU Link <->EDA API 的資料上拋建議做法,具體化上拋架構的描述
+3.	請格祥將表單內容做成實際Data範例,以及上拋data呈現畫面範例
+
+
+
+技能發展平台 正式機 DB
+Server name: mmfasqlsrv.database.windows.net
+Account: mmfaadm
+Password: mmfa$adm01
+
